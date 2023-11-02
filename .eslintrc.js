@@ -3,7 +3,12 @@ module.exports = {
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "next/core-web-vitals"
+    "next/core-web-vitals",
+    "plugin:import"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "import"
   ],
   "rules": {
     "semi": ["error", "always"],
@@ -53,5 +58,43 @@ module.exports = {
     "prefer-template": "error",
     "import/no-cycle": "error",
     "import/newline-after-import": "error",
+    "sort-imports": [
+      "error",
+      { "ignoreCase": true, "ignoreDeclarationSort": true }
+    ],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          ["sibling", "parent"],
+          "object"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "builtin",
+            "position": "before"
+          },
+          {
+            "pattern": ".*/UI/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "./*.module.css",
+            "group": "index",
+            "position": "after"
+          }
+        ],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
   }
 }

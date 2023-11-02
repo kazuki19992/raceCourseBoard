@@ -1,0 +1,28 @@
+export const GoalDiff = {
+  diff1: "diff1",
+  diff2: "diff2",
+  diff3: "diff3",
+  diff4: "diff4",
+  diff5: "diff5",
+  diff6: "diff6",
+  diff7: "diff7",
+  diff8: "diff8",
+  diff9: "diff9",
+  diff10: "diff10",
+  diff1_2: "diff1_2",
+  diff1_1_2: "diff1_1_2",
+  diff1_1_4: "diff1_1_4",
+  diff1_3_4: "diff1_3_4",
+  diff2_1_2: "diff2_1_2",
+  diff3_4: "diff3_4",
+  diff3_1_2: "diff3_1_2",
+  big: "big",
+  head: "head",
+  neck: "neck",
+  nose: "nose",
+  photo: "photo",
+  same: "same",
+  none: "none",
+} as const;
+
+export type GoalDiff = keyof typeof GoalDiff;
