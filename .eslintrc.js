@@ -53,6 +53,5 @@ module.exports = {
     "prefer-template": "error",
     "import/no-cycle": "error",
     "import/newline-after-import": "error",
-
   }
 }
