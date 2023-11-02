@@ -46,7 +46,7 @@ export const CourseCondition = {
   2: "重",
   3: "不良",
 } as const;
-export type courseCondition = keyof typeof CourseCondition;
+export type CourseCondition = keyof typeof CourseCondition;
 
 export type RaceInfoProps = {
   raceCourseId: RaceCourse;

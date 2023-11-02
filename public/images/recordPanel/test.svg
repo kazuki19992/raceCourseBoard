@@ -1,0 +1,18 @@
+<svg width="348" height="116" viewBox="0 0 348 116" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="348" height="116" fill="#202020"/>
+<rect x="36" y="51" width="20" height="36" fill="#FF0000"/>
+<path d="M36 87H56L20 116H0L36 87Z" fill="#FF0000"/>
+<rect y="35" width="93" height="20" fill="#FF0000"/>
+<rect x="99" y="8" width="79" height="20" fill="#FF0000"/>
+<path d="M99 88L178 8V28L99 108V88Z" fill="#FF0000"/>
+<path d="M178 88L138.5 48V68L178 108V88Z" fill="#FF0000"/>
+<rect x="11" y="3" width="72" height="20" fill="#FF0000"/>
+<rect x="188" width="20" height="116" fill="#FF0000"/>
+<rect x="297" width="20" height="116" fill="#FF0000"/>
+<rect x="266" y="28" width="20" height="53" fill="#FF0000"/>
+<rect x="328" y="28" width="20" height="53" fill="#FF0000"/>
+<rect x="266" y="28" width="82" height="20" fill="#FF0000"/>
+<rect x="266" y="61" width="82" height="20" fill="#FF0000"/>
+<rect x="188" y="48" width="37" height="20" fill="#FF0000"/>
+<path d="M225 48L263.5 81H233L217 68L225 48Z" fill="#FF0000"/>
+</svg>
