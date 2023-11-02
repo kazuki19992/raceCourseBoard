@@ -30,9 +30,9 @@ export const GoalDiff: React.FC<{ goalDiff: GoalDiffType }> = ({
     same: "/images/goalDiff/same.svg",
   };
   return (
-    <div className="flex items-center w-full justify-around my-8">
+    <div className="flex items-center w-full justify-around">
       <p
-        className={`text-big ${
+        className={`text-horse ${
           goalDiff === GoalDiffType.same ? "text-led" : "text-zinc-800"
         }`}
         data-testid="goalDiff"
@@ -42,7 +42,7 @@ export const GoalDiff: React.FC<{ goalDiff: GoalDiffType }> = ({
       <img
         src={goalDiffImage[goalDiff]}
         alt="goalNumber"
-        className="h-32 w-auto"
+        className="h-10 w-auto"
       />
     </div>
   );

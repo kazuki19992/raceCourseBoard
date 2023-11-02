@@ -13,14 +13,14 @@ export const HorseNumber: React.FC<{
   };
 
   return (
-    <div className="flex items-center gap-8">
+    <div className="flex items-center gap-4">
       <img
         src={goalNumberImage[goalNumber]}
         alt="goalNumber"
-        className="w-32 h-32"
+        className="w-14 h-14"
         data-testid={`goalNumber${goalNumber}`}
       />
-      <p className="text-led text-big w-96 h-48 race-number bg-zinc-900 flex items-center justify-end">
+      <p className="text-led text-horse w-28 h-14 race-number bg-zinc-900 flex items-center justify-end">
         {horseNumber}
       </p>
     </div>

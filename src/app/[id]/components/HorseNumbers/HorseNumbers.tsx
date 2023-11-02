@@ -10,7 +10,7 @@ export const HorseNumbers: React.FC<{
   const { getGoalNumber } = useHorseNumbers(goalDiffs);
   return (
     <div
-      className="flex justify-between items-center mt-6"
+      className="flex justify-between items-center mt-2"
       data-testid="horseNumber"
     >
       <div className="w-1/2 gap-4 flex flex-col">

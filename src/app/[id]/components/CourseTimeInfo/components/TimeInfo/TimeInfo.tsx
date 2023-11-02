@@ -28,11 +28,11 @@ export const TimeInfo: React.FC<{
       <div className="w-full flex justify-end">
         <img
           src={recordDisplayDataImage[recordDisplayData]}
-          className="h-24 mx-3"
+          className="h-9 mx-3"
           data-testid={`${recordDisplayData}Panel`}
         />
       </div>
-      <div className="w-full flex flex-col items-end gap-5 mt-3">
+      <div className="w-full flex flex-col items-end gap-3 mt-3">
         <div className="w-full flex items-center justify-between">
           <p className="w-1/2 text-info text-right">タイム</p>
           <TimePanel time={time} />

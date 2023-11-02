@@ -14,11 +14,11 @@ export const CourseTimeInfo: React.FC<{
     <div className="flex justify-between">
       <div className="w-1/3 flex flex-col items-center">
         <p className="text-info">芝</p>
-        <p className="text-led text-base w-64 h-32 race-number bg-zinc-900 flex items-center justify-center course-condition">
+        <p className="text-led text-horse w-24 h-fit race-number bg-zinc-900 flex items-center justify-center course-condition">
           {CourseCondition[turf]}
         </p>
         <p className="text-info">ダート</p>
-        <p className="text-led text-base w-64 h-32 race-number bg-zinc-900 flex items-center justify-center course-condition">
+        <p className="text-led text-horse w-24 h-fit race-number bg-zinc-900 flex items-center justify-center course-condition">
           {CourseCondition[dirt]}
         </p>
       </div>
