@@ -10,7 +10,7 @@ export const ConfirmedPanel: React.FC<{
     case "confirmed": {
       return (
         <img
-          src="/images/confirmed.svg"
+          src={`/images/${ConfirmedStatus.confirmed}.svg`}
           alt="confirmed"
           data-testid="confirmed"
           className="w-full h-auto"
@@ -20,7 +20,7 @@ export const ConfirmedPanel: React.FC<{
     case "unconfirmed": {
       return (
         <img
-          src="/images/unconfirmed.svg"
+          src={`/images/${ConfirmedStatus.unconfirmed}.svg`}
           alt="unconfirmed"
           data-testid="unconfirmed"
           className="w-full h-auto"
@@ -30,7 +30,7 @@ export const ConfirmedPanel: React.FC<{
     case "deliberation": {
       return (
         <img
-          src="/images/deliberation.svg"
+          src={`/images/${ConfirmedStatus.deliberation}.svg`}
           alt="deliberation"
           data-testid="deliberation"
           className="w-full h-auto"
