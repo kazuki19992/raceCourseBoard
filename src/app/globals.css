@@ -1,27 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: 'race-number';
+  src: url('./assets/fonts/race-number.woff') format('woff')
+}
+@font-face {
+  font-family: 'race-time';
+  src: url('./assets/fonts/race-time.woff') format('woff')
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+
+html {
+  font-size: 100%;
+  background-color: #000;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.race-number {
+  font-family: "race-number";
+}
+
+.race-time {
+  font-family: "race-time";
+}
+
+.course-condition {
+  font-family: 'Noto Serif JP', serif;
 }
