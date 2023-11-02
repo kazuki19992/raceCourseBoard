@@ -6,11 +6,11 @@
 
 @font-face {
   font-family: 'race-number';
-  src: url('./assets/fonts/race-number.woff') format('woff')
+  src: url('/fonts/race-number.woff') format('woff')
 }
 @font-face {
   font-family: 'race-time';
-  src: url('./assets/fonts/race-time.woff') format('woff')
+  src: url('/fonts/race-time.woff') format('woff')
 }
 
 
