@@ -1,45 +1,54 @@
-import { ConfirmedStatus, GoalDiff } from "@/models";
+"use client";
+import DefaultErrorPage from "next/error";
+
 import { RaceInfo, HorseNumbers, CourseTimeInfo } from "./components";
+import { useRaceBoardPage } from "./hooks/useRaceBoardPage";
 
-export default function RaceBoardPage() {
-  const raceInfo = {
-    raceCourseId: 5,
-    raceNumber: 11,
-    confirmedStatus: ConfirmedStatus.confirmed,
-  };
+import {
+  ConfirmedStatus,
+  GoalDiff,
+  RaceCourse,
+  CourseCondition,
+  RecordPanel,
+} from "@/models";
 
-  const horseNumbers = {
-    horseNumbers: [1, 2, 3, 4, 5],
-    goalDiffs: ["diff1", "diff2", "diff3", "diff4"],
-  };
+export default function RaceBoardPage({ params }: { params: { id: string } }) {
+  const { getRaceBoardInfo } = useRaceBoardPage(params.id as string);
 
-  const courseTimeInfo = {
-    turf: 0,
-    dirt: 0,
-    timeInfo: "record",
-    time: "1:55.2",
-    last4: "46.1",
-    last3: "34.7",
-  };
+  const boardData = getRaceBoardInfo();
+
+  if (boardData == null) {
+    return <DefaultErrorPage statusCode={404} />;
+  }
+
+  const { raceInfo, horseInfo, trackInfo, recordTimeInfo } = boardData;
+
   return (
     <div className="w-full ">
       <div className="aspect-[9/16] bg-black max-h-screen max-w-full text-white p-3 sm:hidden">
         <RaceInfo
-          raceCourseId={raceInfo.raceCourseId as 5}
-          raceNumber={raceInfo.raceNumber}
-          confirmedStatus={raceInfo.confirmedStatus}
+          raceCourseId={(raceInfo.course || 5) as RaceCourse}
+          raceNumber={raceInfo.raceNumber || 1}
+          confirmedStatus={raceInfo.confirmed || ConfirmedStatus.unconfirmed}
         />
         <HorseNumbers
-          horseNumbers={horseNumbers.horseNumbers}
-          goalDiffs={horseNumbers.goalDiffs as GoalDiff[]}
+          horseNumbers={horseInfo.horseNumbers || [0, 0, 0, 0, 0]}
+          goalDiffs={
+            horseInfo.goalDiffs || [
+              GoalDiff.big,
+              GoalDiff.big,
+              GoalDiff.big,
+              GoalDiff.big,
+            ]
+          }
         />
         <CourseTimeInfo
-          turf={0}
-          dirt={0}
-          timeInfo="record"
-          time={"1:55.2"}
-          last4="46.1"
-          last3="34.7"
+          turf={(trackInfo.turf as CourseCondition) || 0}
+          dirt={(trackInfo.dirt as CourseCondition) || 0}
+          timeInfo={recordTimeInfo.record || RecordPanel.none}
+          time={recordTimeInfo.time || "1:23.4"}
+          last4={recordTimeInfo.last4 || "12.3"}
+          last3={recordTimeInfo.last3 || "12.3"}
         />
       </div>
       <div className="hidden sm:flex container mx-auto w-screen h-screen items-center justify-center">
