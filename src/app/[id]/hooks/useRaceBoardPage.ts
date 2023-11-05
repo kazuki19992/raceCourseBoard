@@ -6,15 +6,15 @@ export const useRaceBoardPage = (id: string) => {
     const boardInfo = id.split("-");
 
     if (boardInfo.length !== 11) {
+      console.error("boardInfo.length !== 11");
       return null;
     }
 
     const time = boardInfo[8].split(".");
     if (time.length !== 3) {
+      console.error("time.length !== 3");
       return null;
     }
-
-    console.log(decodeURI(boardInfo[8]));
 
     const raceInfo = {
       course:
@@ -69,12 +69,14 @@ export const useRaceBoardPage = (id: string) => {
     if (confirmedString === "u") {
       return ConfirmedStatus.unconfirmed;
     }
+    console.error("confirmedString is not c, d, u");
     return null;
   };
 
   const getHorseNumbers = (horseNumberString: string): number[] | null => {
     const horseNumberArray = horseNumberString.match(/\d{2}/g);
     if (horseNumberArray === null) {
+      console.error("horseNumberArray === null");
       return null;
     }
 
@@ -83,6 +85,10 @@ export const useRaceBoardPage = (id: string) => {
       if (1 <= horseNumberInt && horseNumberInt <= 18) {
         return horseNumberInt;
       }
+      console.error(
+        "horseNumberInt is not 1 <= horseNumberInt && horseNumberInt <= 18",
+        horseNumberInt
+      );
       return null;
     });
 
@@ -98,6 +104,7 @@ export const useRaceBoardPage = (id: string) => {
     goalDiffArray.shift();
 
     if (goalDiffArray.length !== 4) {
+      console.error("goalDiffArray.length !== 4");
       return null;
     }
 
@@ -125,6 +132,9 @@ export const useRaceBoardPage = (id: string) => {
         if (goalDiff === "none") {
           return GoalDiff.none;
         }
+        console.error(
+          "goalDiff is not number and not b, h, neck, nose, p, s, none"
+        );
         return null;
       }
 
@@ -153,6 +163,9 @@ export const useRaceBoardPage = (id: string) => {
       if (goalDiff === "3_1_2") {
         return GoalDiff.diff3_1_2;
       }
+      console.error(
+        "goalDiff is not 1 <= goalDiff && goalDiff <= 10 and not 1_2, 1_1_2, 1_1_4, 1_3_4, 2_1_2, 3_4, 3_1_2"
+      );
       return null;
     });
 

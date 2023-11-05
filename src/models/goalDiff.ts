@@ -25,4 +25,33 @@ export const GoalDiff = {
   none: "none",
 } as const;
 
+export const GoalDiffLabel = {
+  diff1: "1",
+  diff2: "2",
+  diff3: "3",
+  diff4: "4",
+  diff5: "5",
+  diff6: "6",
+  diff7: "7",
+  diff8: "8",
+  diff9: "9",
+  diff10: "10",
+  diff1_2: "1/2",
+  diff1_1_2: "1 1/2",
+  diff1_1_4: "1 1/4",
+  diff1_3_4: "1 3/4",
+  diff2_1_2: "2 1/2",
+  diff3_4: "3/4",
+  diff3_1_2: "3 1/2",
+  big: "大差",
+  head: "アタマ",
+  neck: "クビ",
+  nose: "ハナ",
+  photo: "写真",
+  same: "同着",
+  none: "無表示",
+} as const;
+
 export type GoalDiff = keyof typeof GoalDiff;
+export type GoalDiffLabel = (typeof GoalDiffLabel)[keyof typeof GoalDiffLabel];
+export const goalDiffArray = Object.values(GoalDiff);
