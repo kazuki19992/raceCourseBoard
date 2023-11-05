@@ -21,7 +21,7 @@ export const HorseNumber: React.FC<{
         data-testid={`goalNumber${goalNumber}`}
       />
       <p className="text-led text-horse w-28 h-14 race-number bg-zinc-900 flex items-center justify-end">
-        {horseNumber}
+        {horseNumber !== 0 ? horseNumber : ""}
       </p>
     </div>
   );

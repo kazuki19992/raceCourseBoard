@@ -1,7 +1,7 @@
 import { ConfirmedPanel } from "./components";
 import { useRaceInfo } from "./hooks";
 
-import { ConfirmedStatus, RaceInfoProps } from "@/models";
+import { RaceInfoProps } from "@/models";
 import { RaceCourse } from "@/models";
 
 export const RaceInfo: React.FC<RaceInfoProps> = ({
