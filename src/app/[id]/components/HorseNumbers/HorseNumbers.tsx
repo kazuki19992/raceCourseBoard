@@ -14,7 +14,7 @@ export const HorseNumbers: React.FC<{
       data-testid="horseNumber"
     >
       <div className="w-1/2 gap-4 flex flex-col">
-        {/* 着順馬番 */}
+        {/* 着順番号 */}
         {horseNumbers.map((horseNumber, index) => (
           <HorseNumber
             goalNumber={getGoalNumber(index) as 1 | 2 | 3 | 4 | 5}
