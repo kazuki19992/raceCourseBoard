@@ -22,7 +22,6 @@
     "eslint-plugin-import": "^2.29.0",
     "happy-dom": "^12.10.3",
     "next": "14.0.1",
-    "next-pwa": "^5.6.0",
     "puppeteer-core": "^21.5.0",
     "react": "^18",
     "react-dom": "^18",
