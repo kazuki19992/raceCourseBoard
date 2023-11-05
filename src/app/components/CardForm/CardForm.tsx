@@ -17,15 +17,12 @@ export const CardForm: React.FC<{ handle: ReturnType<typeof usePage> }> = ({
   const {
     raceInfo,
     horseInfo,
-    trackInfo,
     recordTimeInfo,
     setRaceCourse,
     setRaceNumber,
     setConfirmedStatus,
     setHorseNumber,
     setGoalDiff,
-    setTurf,
-    setDirt,
     setRecord,
     setTime,
     setLast3,
@@ -175,7 +172,10 @@ export const CardForm: React.FC<{ handle: ReturnType<typeof usePage> }> = ({
           <div className="w-1/3 flex-col h-full flex gap-3">
             {/* 馬番 */}
             {[...Array(5)].map((_, i) => (
-              <div className="w-full flex items-center justify-center h-full">
+              <div
+                className="w-full flex items-center justify-center h-full"
+                key={i}
+              >
                 <img
                   src={`/images/goalNumber/${i + 1}.svg`}
                   className="w-1/2 h-1/2"
@@ -206,9 +206,12 @@ export const CardForm: React.FC<{ handle: ReturnType<typeof usePage> }> = ({
                     (i + 1) as 1 | 2 | 3 | 4
                   );
                 }}
+                key={`select${i}`}
               >
                 {goalDiffArray.map((key) => (
-                  <option value={key}>{GoalDiffLabel[key]}</option>
+                  <option value={key} key={`option${key}`}>
+                    {GoalDiffLabel[key]}
+                  </option>
                 ))}
               </select>
             ))}

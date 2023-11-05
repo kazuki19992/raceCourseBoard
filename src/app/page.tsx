@@ -1,15 +1,5 @@
 "use client";
-import {
-  ConfirmedStatus,
-  CourseCondition,
-  GoalDiff,
-  RaceCourse,
-  RaceInfoProps,
-  RecordPanel,
-} from "@/models";
-import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import { usePage } from "./hooks";
 import { CardForm } from "./components";
 
@@ -37,7 +27,7 @@ export default function Home() {
         <a
           className="rounded-full bg-black text-sm text-white px-5 py-2 shadow-lg shadow-black/50"
           href={`https://twitter.com/intent/tweet?text=${encodeURI(
-            `${window.location.origin}/${handle.generateURIParams()}`
+            `https://raceboard.kazuki19992.com/${handle.generateURIParams()}`
           )}&hashtags=着順掲示板ジェネレーター`}
         >
           着順掲示板を共有する
