@@ -1,5 +1,6 @@
 "use client";
 import DefaultErrorPage from "next/error";
+import Link from "next/link";
 
 import { RaceInfo, HorseNumbers, CourseTimeInfo } from "./components";
 import { useRaceBoardPage } from "./hooks/useRaceBoardPage";
@@ -50,6 +51,14 @@ export default function RaceBoardPage({ params }: { params: { id: string } }) {
           last4={recordTimeInfo.last4 || "12.3"}
           last3={recordTimeInfo.last3 || "12.3"}
         />
+      </div>
+      <div className="w-full p-2 flex items-center justify-between gap-1">
+        <Link
+          href={"/"}
+          className="text-white w-full rounded-full border flex justify-center items-center p-4 shadow shadow-white"
+        >
+          トップに戻る
+        </Link>
       </div>
       <div className="hidden sm:flex container mx-auto w-screen h-screen items-center justify-center">
         <p className="text-white text-2xl">
